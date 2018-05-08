@@ -27,5 +27,9 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+<<<<<<< HEAD
     testCompile ('junit:junit:4.12')
 }
+=======
+}
+>>>>>>> 6a67f8a093aeced0187b0c40fc81ce8ca3208f93
