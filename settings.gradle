@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+rootProject.name = 'calculator'
+=======
 rootProject.name = 'kodilla-course'
+<<<<<<< HEAD
 include 'kodilla-testing'
 
+=======
+>>>>>>> 6a67f8a093aeced0187b0c40fc81ce8ca3208f93
+>>>>>>> 2a433c049c21f1e7472a9f766af576e6ea33328f
