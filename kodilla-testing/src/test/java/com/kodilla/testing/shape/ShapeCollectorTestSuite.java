@@ -1,4 +1,44 @@
-package com.kodilla.testing.shape;
-
-public class ShapeCollectorTestSuite {
-}
+//package com.kodilla.testing.shape;
+//
+//import org.junit.*;
+//
+//import java.util.ArrayList;
+//
+//public class ShapeCollectorTestSuite {
+//
+//    private static int testCounter = 0;
+//
+//    @BeforeClass
+//    public static void beforeAllTests (){
+//        System.out.println("This is the beginning of tests.");
+//    }
+//
+//    @AfterClass
+//    public static void afterAllTests() {
+//        System.out.println("All tests are finished.");
+//    }
+//
+//    @Before
+//    public void beforeEveryTest() {
+//        testCounter++;
+//        System.out.println("Preparing to execute test #" + testCounter);
+//    }
+//
+//    @Test
+//    public void testAddFigure() {
+//        //Given
+//        ShapeCollector circle = new ShapeCollector(new Circle("Circle", 30));
+//        ShapeCollector square = new ShapeCollector (new Square("Square", 50));
+//        ShapeCollector triangle = new ShapeCollector (new Triangle("Triagle", 35));
+//        ArrayList<ShapeCollector> shapes = new ArrayList <ShapeCollector>();
+//
+//
+//        //When
+//        shapes.add(circle);
+//        shapes.add(square);
+//        shapes.add(triangle);
+//
+//        //Then
+//        Assert.assertEquals(3, shapes.size());
+//    }
+//}
