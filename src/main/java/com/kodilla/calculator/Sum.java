@@ -20,7 +20,6 @@ public class Sum {
 
     public int getA (){
         return this.a;
-
     }
 
     public int getB() {
