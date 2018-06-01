@@ -19,7 +19,8 @@
 //        //When
 //        ForumStatistics forumStatistics = new ForumStatistics();
 //        forumStatistics.calculateAdvStatistics(statisticsMock);
-//        when(statisticsMock.usersNames()).thenReturn(users.size());
+//        Integer usersSize = users.size();
+//        when(statisticsMock.usersNames()).thenReturn(usersSize);
 //        when(statisticsMock.commentsCount()).thenReturn(0);
 //        when(statisticsMock.postsCount()).thenReturn(0);
 //
