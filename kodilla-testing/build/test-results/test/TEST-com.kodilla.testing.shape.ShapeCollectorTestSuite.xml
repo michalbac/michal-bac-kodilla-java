@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-06-01T14:09:21" hostname="PL2054956W1" time="0.01">
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-06-02T13:40:48" hostname="PL2054956W1" time="0.011">
   <properties/>
-  <testcase name="testGetField" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.005"/>
+  <testcase name="testGetField" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.007"/>
   <testcase name="testShowFigures" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
-  <testcase name="testGetShapeName" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetShapeName" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
   <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
   <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
   <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
