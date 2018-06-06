@@ -9,20 +9,20 @@ import java.util.stream.Collectors;
 
 public final class World {
 
-    List<Continent> World = new ArrayList<>();
+    List<Continent> continents = new ArrayList<>();
 
     public void addContinent (Continent continent) {
-        World.add(continent);
+        continents.add(continent);
     }
 
     public List<Continent> getWorld() {
-        return new ArrayList<>(World);
+        return new ArrayList<>(continents);
     }
 
-//    public Set<BigDecimal> getPeopleQuantity() {
-//        return getWorld().stream()
-//                .flatMap(continent -> continent.getCountries().stream())
-//                .map(Country::getPeopleQuantity)
-//                .collect(Collectors.toSet());
-//    }
+    public BigDecimal getPeopleQuantity() {
+        return getWorld().stream()
+                .flatMap(continent -> continent.getCountries().stream())
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+    }
 }
