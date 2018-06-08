@@ -1,4 +1,4 @@
-package com.kodilla.testing.library;
+package com.kodilla.testing.forum.statistics.library;
 
 import org.junit.Test;
 
