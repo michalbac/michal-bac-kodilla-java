@@ -27,3 +27,11 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+build/
+out/
+target/
+/build/
+/out/
+/target/
+*.class
