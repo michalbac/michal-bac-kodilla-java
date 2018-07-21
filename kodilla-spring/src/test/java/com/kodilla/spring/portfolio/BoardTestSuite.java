@@ -8,10 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class BoardTestSuite {
 
     @Test
-    public void testTaskAdd()() {
+    public void testTaskAdd(){
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
-        Board board = (Board) context.getBean("toDoList");
         boolean toDoBean = context.containsBean("toDoList");
 
         //when

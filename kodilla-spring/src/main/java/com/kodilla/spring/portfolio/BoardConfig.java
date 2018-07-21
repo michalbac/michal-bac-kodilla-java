@@ -9,24 +9,25 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class BoardConfig {
 @Autowired
-@Qualifier("toDoList")
 Board board;
+
+    @Bean public Board board() { return new Board(taskListToDo(), taskListInProgress(), taskListDone()); }
 
     @Bean(name = "toDoList")
     @Scope("prototype")
-    Board taskListToDo() {
-        return new Board (new TaskList());
+    TaskList taskListToDo() {
+        return new TaskList();
     }
 
     @Bean(name = "inProgressList")
     @Scope("prototype")
-    Board taskListInProgress() {
-        return new Board (new TaskList());
+    TaskList taskListInProgress() {
+        return new TaskList();
     }
 
     @Bean(name = "doneList")
     @Scope("prototype")
-    Board taskListDone() {
-        return new Board (new TaskList());
+    TaskList taskListDone() {
+        return new TaskList();
     }
 }
