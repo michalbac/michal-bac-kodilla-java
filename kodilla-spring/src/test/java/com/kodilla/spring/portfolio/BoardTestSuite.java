@@ -11,12 +11,18 @@ public class BoardTestSuite {
     public void testTaskAdd(){
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext(BoardConfig.class);
-        boolean toDoBean = context.containsBean("toDoList");
+        TaskList toDo = (TaskList) context.getBean("toDoList");
+        TaskList inProgress = (TaskList) context.getBean("inProgressList");
+        TaskList done = (TaskList) context.getBean("doneList");
 
-        //when
-
+        //When
+        toDo.tasks.add("task1");
+        inProgress.tasks.add("task2");
+        done.tasks.add("task3");
 
         //Then
-        Assert.assertTrue(toDoBean);
+        Assert.assertEquals(1, toDo.tasks.size());
+        Assert.assertEquals(1, inProgress.tasks.size());
+        Assert.assertEquals(1, done.tasks.size());
     }
 }
