@@ -1,8 +1,11 @@
 package com.kodilla.hibernate.manytomany;
 
+
 import javax.persistence.*;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 @NamedNativeQuery(
@@ -11,6 +14,7 @@ import java.util.List;
         " WHERE lower(substr(COMPANY_NAME,1,3)) in (:NAME) ",
         resultClass = Company.class
 )
+@Component
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

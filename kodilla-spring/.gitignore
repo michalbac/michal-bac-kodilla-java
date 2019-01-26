@@ -1,7 +1,5 @@
 .gradle
 /build/
-/out/
-/target/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -20,18 +18,10 @@
 *.ipr
 /out/
 
-### NetBeans ###git push orig
+### NetBeans ###
 /nbproject/private/
 /build/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-
-build/
-out/
-target/
-/build/
-/out/
-/target/
-*.class
