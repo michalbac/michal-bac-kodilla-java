@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -147,25 +148,16 @@ public class BoardTestSuite {
         //Given
         Board project = prepareTestData();
 
-        //When
-        List<TaskList> inProgressTasks = new ArrayList<>();
+        List <TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        long quantityOfElements = project.getTaskLists().stream()
+        double average = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .map(t -> t.getCreated())
-                .count();
-
-        long sumOfElements = project.getTaskLists().stream()
-                .filter(inProgressTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .mapToLong(t -> DAYS.between(t.getCreated(), (LocalDate.now())))
-                .reduce(0, (sum, current) -> sum = sum + (current));
-
-        double averageDays = (double) sumOfElements/ (double) quantityOfElements;
-
+                .flatMap( n -> n.getTasks().stream())
+                .mapToDouble( p -> (DAYS.between(p.getCreated(), LocalDate.now())))
+                .average()
+                .getAsDouble();
         //Then
-        Assert.assertEquals(10, averageDays, 0.1);
+        Assert.assertEquals(10.0, average, 0.1);
     }
 
 }
